@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dashboard - AlcoserMind</title>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body class="w3-light-grey w3-text-dark-grey">
+  <header class="w3-container w3-blue w3-padding" role="banner">
+    <h1 class="w3-xxlarge">Panel Principal - AlcoserMind</h1>
+    <nav class="w3-bar" aria-label="Navegación principal">
+      <a href="index.html" class="w3-bar-item w3-button">Inicio</a>
+      <a href="dashboard.html" class="w3-bar-item w3-button w3-white w3-disabled" aria-current="page">Dashboard</a>
+    </nav>
+  </header>
+  <main class="w3-container w3-padding" role="main">
+    <section aria-labelledby="dreamsTitle" class="w3-margin-bottom">
+      <h2 id="dreamsTitle" class="w3-xlarge">Mis Sueños</h2>
+      <ul id="dreamsList" class="w3-ul w3-card-4 w3-white w3-round w3-padding">
+        <li class="w3-padding">Viajar por el mundo - Explora nuevos destinos y culturas.</li>
+        <li class="w3-padding">Aprender un nuevo idioma - Domina una lengua extranjera y amplía tus horizontes.</li>
+      </ul>
+    </section>
+    <section aria-labelledby="addDreamTitle">
+      <h2 id="addDreamTitle" class="w3-xlarge">Agregar un nuevo sueño</h2>
+      <form id="dreamForm" novalidate class="w3-container w3-card-4 w3-white w3-padding w3-round">
+        <label for="dreamTitle" class="w3-text-dark-grey">Título del sueño</label>
+        <input type="text" id="dreamTitle" name="dreamTitle" required aria-required="true" class="w3-input w3-border w3-round" />
+        <span class="error w3-text-red w3-small" id="dreamTitleError" aria-live="polite"></span>
+
+        <label for="dreamDesc" class="w3-text-dark-grey w3-margin-top">Descripción</label>
+        <textarea id="dreamDesc" name="dreamDesc" required aria-required="true" class="w3-input w3-border w3-round"></textarea>
+        <span class="error w3-text-red w3-small" id="dreamDescError" aria-live="polite"></span>
+
+        <button type="submit" class="w3-button w3-blue w3-round w3-margin-top">Agregar</button>
+      </form>
+    </section>
+  </main>
+  <footer class="w3-container w3-blue w3-padding" role="contentinfo">
+    <p>&copy; 2025 AlcoserMind</p>
+    <button id="toggle-theme" aria-label="Cambiar modo claro/oscuro" class="w3-button w3-white w3-round">Modo Claro/Oscuro</button>
+  </footer>
+  <script src="js/main.js"></script>
+</body>
+</html>

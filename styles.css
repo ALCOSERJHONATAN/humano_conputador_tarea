@@ -1,0 +1,132 @@
+:root {
+  --bg: #fff;
+  --text: #222;
+  --primary: #0057b8;
+  --btn-bg: #0057b8;
+  --btn-text: #fff;
+  --error: #b80000;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: Arial, sans-serif;
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header, footer {
+  background: var(--primary);
+  color: var(--btn-text);
+  padding: 1em;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 1em;
+}
+
+nav a {
+  color: var(--btn-text);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a[aria-current="page"] {
+  text-decoration: underline;
+}
+
+main {
+  flex: 1;
+  padding: 2em;
+}
+
+h1, h2, h3 {
+  margin-top: 0;
+}
+
+.btn, button {
+  background: var(--btn-bg);
+  color: var(--btn-text);
+  border: none;
+  padding: 0.7em 1.5em;
+  margin-top: 1em;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 1em;
+}
+
+.btn:focus, button:focus, input:focus, textarea:focus {
+  outline: 3px solid #ffbf00;
+  outline-offset: 2px;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 0.5em;
+  margin-bottom: 0.5em;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  font-size: 1em;
+}
+
+.error {
+  color: var(--error);
+  font-size: 0.9em;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #181818;
+    --text: #f5f5f5;
+    --primary: #222;
+    --btn-bg: #0057b8;
+    --btn-text: #fff;
+    --error: #ff4d4d;
+  }
+}
+
+body.dark-mode {
+  background-color: #181818 !important;
+  color: #f5f5f5 !important;
+}
+
+body.dark-mode header,
+body.dark-mode footer {
+  background-color: #222 !important;
+  color: #fff !important;
+}
+
+body.dark-mode .btn,
+body.dark-mode button {
+  background-color: #0057b8 !important;
+  color: #fff !important;
+}
+
+body.dark-mode nav a {
+  color: #fff !important;
+}
+
+body.dark-mode nav a[aria-current="page"] {
+  text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+  main {
+    padding: 1em;
+  }
+  nav ul {
+    flex-direction: column;
+    gap: 0.5em;
+  }
+}
